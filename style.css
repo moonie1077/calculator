@@ -1,3 +1,93 @@
 body {
-color: yellow;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+
+.header {
+display: flex;
+flex-direction: column;
+width: auto;
+height: 55px;
+background: darkblue;
+justify-content: center;
+font-family: "Fredoka One";
+color: gold;
+font-style: italic;
+font-weight: 500;
+text-align: end;
+padding-right: 10px;
+font-size: 30px;
+}
+.calculator{
+display: flex;
+flex-direction: column;
+width: 350px;
+background: darkblue;
+}
+.display{
+display: flex;
+font-family:"SilkScreen";
+font-size: 36px;
+justify-content: right;
+background: lightgrey;
+}
+.buttons{
+display: flex;
+flex-direction: row;
+border: 1px solid black;
+justify-content: space-between;
+font-family: "Zen Dots";
+font-size: 36px;
+padding: 4px;
+color: white;
+}
+
+.numbers{
+display: flex;
+flex-flow: row wrap;
+width: 75%;
+text-align: center;
+justify-content: space-between;
+}
+
+.number{
+display: flex;
+width: 75px;
+height: 75px;
+margin: 2px;
+border-radius: 30%;
+justify-content: center;
+align-items: center;
+background: black;
+}
+
+.bottom{
+display: flex;
+width: 100%;
+}
+
+.zero{width: 175px;}
+
+.operands{
+font-family: "Zen Dots";
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.operand{
+display: flex;
+width: 75px;
+height: 55px;
+margin: 2px;
+border-radius: 30%;
+justify-content: center;
+align-items: center;
+background: grey;
+}
+
+.highlight{
+background:yellow;
+color: black;
 }

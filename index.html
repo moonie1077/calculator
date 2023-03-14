@@ -5,8 +5,40 @@
     <title>Odin Calculator</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css"></link>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Silkscreen&family=Zen+Dots">
 </head>
 <body>
-This is a calculator.
+
+<div class="calculator">
+    <div class="header">ti-10</div>
+  <div class="display">7843920</div>
+  <div class="buttons">
+      <div class="numbers">
+        <div class="number clickable" data-key="9">9</div>
+        <div class="number clickable" data-key="8">8</div>
+        <div class="number clickable" data-key="7">7</div>
+        <div class="number clickable" data-key="6">6</div>
+        <div class="number clickable" data-key="5">5</div>
+        <div class="number clickable" data-key="4">4</div>
+        <div class="number clickable" data-key="3">3</div>
+        <div class="number clickable" data-key="2">2</div>
+        <div class="number clickable" data-key="1">1</div>
+          <div class="bottom">
+              <div class="number zero clickable" data-key="0">0</div>
+              <div class="number clickable" data-key=".">.</div>
+          </div>
+      </div>
+
+      <div class="operands">
+          <div class="operand clickable" data-key="+">+</div>
+          <div class="operand clickable" data-key="-">-</div>
+          <div class="operand clickable" data-key="*">*</div>
+          <div class="operand clickable" data-key="/">/</div>
+          <div class="operand clickable" data-key="=">=</div>
+      </div>
+  </div>
+
+</div>
 </body>
 </html>
