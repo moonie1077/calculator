@@ -6,11 +6,11 @@ flex-direction: column;
 
 .header {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 width: auto;
 height: 55px;
 background: darkblue;
-justify-content: center;
+justify-content: space-between;
 font-family: "Fredoka One";
 color: gold;
 font-style: italic;
@@ -19,7 +19,23 @@ text-align: end;
 padding-right: 10px;
 font-size: 30px;
 border-radius:50%;
+align-items: center;
+
 }
+
+.on{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 30px;
+width: 75px;
+font-size: 15px;
+margin-left: 15px;
+background: lightblue;
+color: black;
+border-radius: 15%;
+}
+
 .calculator{
 display: flex;
 flex-direction: column;
