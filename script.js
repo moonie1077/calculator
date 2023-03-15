@@ -23,11 +23,44 @@ function operate(a,b,operator) {
 }
 
 function highlightButton(e) {
-console.log(e);
-console.log(e.target.dataset.key);
 const key=document.querySelector(`.clickable[data-key="${e.target.dataset.key}"]`);
-console.log(key)
 key.classList.add('highlight');
+
+//clearDisplay === 1? () => {readout.textContent = ""; clearDisplay = 0}:{};
+if (clearDisplay == 1)
+    {readout.textContent = "";
+     clearDisplay = 0};
+
+if (key.classList.contains('decimal') &&
+    readout.textContent.indexOf(".")!==-1) {return} //accounts for potential multiple decimals
+
+if (key.classList.contains('operand')) {
+
+    if (numberOne == ""){
+        operation = e.target.dataset.key;
+        numberOne = +readout.textContent;
+        clearDisplay = 1;
+        return;
+        }
+    else {
+        numberTwo = +readout.textContent;
+        if (e.target.dataset.key == "=") {
+            readout.textContent = +operate(numberOne, numberTwo, operation);
+            numberOne = "";
+            numberTwo = "";
+            operation = "";
+            clearDisplay = 1;
+            return;
+            }
+        else {
+        numberOne = +operate(numberOne, numberTwo, operation);
+        operation = e.target.dataset.key;
+        readout.textContent = numberOne;
+        clearDisplay = 1;
+        return;}
+        }
+}
+readout.textContent += e.target.dataset.key;
 }
 
 
@@ -37,9 +70,16 @@ const key=document.querySelector(`.clickable[data-key="${e.target.dataset.key}"]
 key.classList.remove('highlight');
 }
 
+const readout = document.querySelector('.display');
+let numberOne = "";
+let numberTwo = "";
+let runningTotal = "0";
+let clearDisplay = "";
+let operation = "";
 
 const keys = document.querySelectorAll('.number, .operand');
 keys.forEach(key => { key.addEventListener('mouseup', highlightButtonRemove);
                       key.addEventListener('mousedown', highlightButton);
                      }
              )
+

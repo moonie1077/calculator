@@ -18,16 +18,19 @@ font-weight: 500;
 text-align: end;
 padding-right: 10px;
 font-size: 30px;
+border-radius:50%;
 }
 .calculator{
 display: flex;
 flex-direction: column;
 width: 350px;
 background: darkblue;
+border-radius: 5%;
 }
 .display{
 display: flex;
 font-family:"SilkScreen";
+min-height: 50px;
 font-size: 36px;
 justify-content: right;
 background: lightgrey;
@@ -35,7 +38,6 @@ background: lightgrey;
 .buttons{
 display: flex;
 flex-direction: row;
-border: 1px solid black;
 justify-content: space-between;
 font-family: "Zen Dots";
 font-size: 36px;
